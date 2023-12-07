@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Food Website</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="login.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
@@ -48,9 +48,9 @@
                 <button class="cn"><a href="#">Order Now</a></button>
                 <div class="form">
                     <h2>Login Here</h2>
-                    <input type="email" name="email" placeholder="Enter Email">
-                    <input type="password" name="" placeholder="Enter Passsword">
-                    <button class="btn"><a href="#">Log In</a></button>
+                    <input type="email" name="email"  id="email" placeholder="Enter Email">
+                    <input type="password" name="password" id="password" placeholder="Enter Passsword">
+                    <button class="btn" onclick="login()"><a href="#">Log In</a></button>
                     <p class="link">Don't have an account<br>
                     <a href="#">Sign Up </a>Here</p>
                     <p class="liw"> <a href="#">Log In</a> With</p>
@@ -1168,7 +1168,23 @@ Savor the Tradition: Soft, versatile Arabian Bread
     </div>
 
 </footer>
+<script>
+    function login() {
+      var email = document.getElementById('email').value;
+      var password = document.getElementById('password').value;
 
+      // Basic validation
+      if (email === '' || password === '') {
+        alert('Please enter both email and password');
+        return;
+      }
+
+      // You can add more sophisticated login logic here, e.g., check against a database
+
+      // For this example, just show an alert indicating successful login
+      alert('Login successful! Welcome, '); 
+    }
+  </script>
 
 
 
